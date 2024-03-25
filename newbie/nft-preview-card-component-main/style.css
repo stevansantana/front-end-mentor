@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    height: inherit;
+    background-color: hsl(217, 54%, 11%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+hr {
+    margin: 0;
+    opacity: 0.2;
+}
+
+.container {
+    background-color: hsl(216, 50%, 16%);
+    height: 500px;
+    width: 330px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 10px 20px 20px 20px;
+    color: hsl(216, 76%, 6%);
+}
+
+.image-container {
+    height: 50%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(178, 100%, 50%);
+    border-radius: 13px;
+}
+
+.image-container #image-cube {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    position: absolute;
+    z-index: 2;
+}
+
+.image-container #image-vision {
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    position: absolute;
+    z-index: 1;
+}
+
+.text-container a {
+    display: block;
+    color: hsl(0, 0%, 100%);
+    font-size: 20px;
+    margin-top: 20px;
+    text-decoration: none;
+    font-family: 'Outfit';
+    font-weight: bold;
+}
+
+.text-container p {
+    color: hsl(215, 51%, 70%);
+    font-size: 17px;
+    font-family: 'Outfit';
+}
+
+.eth-days-container { 
+    display: flex;
+    justify-content: space-between; 
+}
+
+.icons-container {
+    display: flex;
+    align-items: center;
+}
+
+.icons-container img {
+    margin-right: 6px;
+}
+
+.icons-container p {
+    font-family: 'Outfit';
+    font-weight: 500;
+}
+
+.avatar-container {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.avatar-container img {
+    height: 40px;
+    width: 40px;
+    border-color: white;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 100%;
+    margin-right: 20px;
+}
+
+.avatar-container p a {
+    font-family: 'Outfit';
+    display: inline;
+    font-size: 14px;
+    font-weight: normal;
+}
+
+.image-container #image-cube:hover {
+    opacity: 0.5;
+    z-index: 0;
+    border-radius: 13px;    
+}
+
+a:hover {
+    color: hsl(178, 100%, 50%);
+}
+
+@media only screen and (max-width: 340px) {
+    .container {
+        border-radius: 0;
+    }
+
+    .text-container a {
+        font-size: 15px;
+    }
+
+    .text-container p {
+        font-size: 13px;
+    }
+
+    .icons-container p{
+        font-size: 12px;
+    }
+
+    .avatar-container {
+        margin-top: 30px;
+    }
+}
+
+@media only screen and (max-width: 195px) {
+    .container {
+        border-radius: 0;
+    }
+
+    .text-container a {
+        font-size: 13px;
+    }
+
+    .text-container p {
+        font-size: 10px;
+    }
+
+    .icons-container p{
+        font-size: 8px;
+
+    }
+
+    .avatar-container {
+        margin-top: 20px;
+    }
+}
