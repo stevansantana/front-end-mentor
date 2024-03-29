@@ -1,0 +1,30 @@
+@media only screen and (max-width: 1000px) {
+
+    .container {
+        width: 700px;
+        height: 400px;
+        
+    }
+    
+    .more-information-container span {
+        font-family: 'Inter';
+        color: hsl(0, 0%, 100%);
+        font-weight: bold;
+        font-size: 22px;
+    }
+    
+    .more-information-container p {
+        font-family: 'Inter';
+        margin-top: 5px;
+        font-size: 12px;
+    }
+    
+    .image-container {
+        background-image: url(images/image-header-desktop.jpg);
+        width: 50%;
+        height: 100%;
+        border-radius: 0px 10px 10px 0px;
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+    }
+}

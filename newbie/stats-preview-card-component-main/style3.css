@@ -1,0 +1,50 @@
+@media only screen and (max-width: 710px) {
+
+    html {
+        height: auto;
+    }
+    
+    .container {
+        flex-direction: column-reverse;
+        height: 860px;
+        width: 350px;
+        border-radius: 10px 10px 10px 10px;
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+
+    .image-container {
+        background-image: url(images/image-header-mobile.jpg);
+        width: 100%;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        border-radius: 10px 10px 0px 0px;
+        
+    }
+    
+    .overlay {
+        border-radius: 10px 10px 0px 0px;
+    }
+    
+    .text-container {
+        height: 60%;
+        width: 100%;
+        text-align: center;
+    }
+
+    .text-container h1 {
+        margin-top: 0px;
+        font-size: 27px;
+    }
+
+    .more-information-container {
+        flex-direction: column;
+        width: 100%;
+        margin: 0;
+        margin-top: 35px;
+    }
+
+    .companies, .templates, .queries {
+        margin-top: 15px;
+    }
+}
