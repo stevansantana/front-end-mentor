@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100..900&family=Lexend+Deca:wght@100..900&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    height: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+.container {
+    height: 470px;
+    width: 1000px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container h1 {
+    font-family: 'Big Shoulders Display';
+    color: hsl(0, 0%, 95%);
+    margin-top: 35px;
+}
+
+.container p {
+    font-family: 'Lexend Deca';
+    color: hsla(0, 0%, 100%, 0.75);
+    margin-top: 20px;
+    font-size: 17px;
+}
+
+.sedans {
+    flex: 33.33%;
+    padding: 50px;
+    background-color: hsl(31, 77%, 52%);
+    height: 100%;
+    border-radius: 10px 0px 0px 10px;
+}
+
+.sedans button {
+    color: hsl(31, 77%, 52%);
+}
+
+.suvs {
+    flex: 33.33%;
+    padding: 50px;
+    background-color:  hsl(184, 100%, 22%);
+    height: 100%;
+}
+
+.suvs button {
+    color: hsl(184, 100%, 22%);
+}
+
+.luxury {
+    flex: 33.33%;
+    padding: 50px;
+    background-color: hsl(179, 100%, 13%);
+    height: 100%;
+    border-radius: 0px 10px 10px 0px;
+}
+
+.luxury button {
+    color: hsl(179, 100%, 13%);
+}
+
+button {
+    margin-top: 60px;
+    height: 50px;
+    width: 160px;
+    border: none;
+    font-size: 17px;
+    border-radius: 30px;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: transparent;
+    color: hsla(0, 0%, 100%, 0.75);
+    border-color: hsla(0, 0%, 100%, 0.75);
+    border-width: 2px;
+    border-style: solid;
+}
