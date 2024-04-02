@@ -1,0 +1,152 @@
+@media only screen and (max-width: 810px) {
+
+    .first-container, .second-container  {
+        width: 600px;
+    }
+
+    .container-monthly h1 {    
+        font-size: 23px;
+    }
+
+    .container-price p:first-child {
+        font-size: 30px;
+        margin-right: 15px;
+        padding-right: 0px;
+    }
+    
+    .container-price p:last-child {
+       font-size: 17px;
+    }
+
+    .container-monthly p {
+        font-size: 15px;
+        padding-right: 35px;
+    }
+
+    .container-monthly button {
+        width: 85%;
+    }
+    
+    .container-us h1 {
+        font-size: 23px;
+    }
+    
+    .container-us ul {
+        font-size: 15px;
+    }
+    
+}
+
+@media only screen and (max-width: 610px) {
+
+    html {
+        height: initial;
+    }
+
+    .first-container {
+        width: 400px;
+        margin-top: 80px;
+        height: 270px;
+    }
+
+    .first-container h1 {
+        font-size: 25px;
+    }
+    
+    .first-paragraph {
+        font-size: 19px;
+        margin-bottom: 25px;
+    }
+    
+    .last-paragraph {
+        font-family: 'Karla';
+        color: hsl(218, 22%, 67%);
+        margin-top: 14px;
+    }
+    
+    .last-paragraph br {
+        display: none;
+        font-size: 25px;
+    }
+    
+    .second-container {
+        flex-direction: column;
+        height: 495px;
+        width: 400px;
+        margin-bottom: 80px;
+    }
+
+    .container-monthly {
+        width: 100%;
+        padding-bottom: 30px;
+        border-radius: 0px;
+    }
+
+    .container-monthly p {
+        font-size: 17px;
+    }
+
+    .container-monthly button {
+        height: 50px;
+    }
+
+    .container-us {
+        width: 100%;
+        border-radius: 0px 0px 10px 10px;
+        padding-bottom: 15px;
+    }
+}
+
+@media only screen and (max-width: 420px) {
+
+    .first-container {
+        width: 300px;
+    }
+
+    .first-container h1 {
+        font-size: 20px;
+    }
+    
+    .first-paragraph {
+        font-size: 16px;
+    }
+    
+    .last-paragraph {
+        font-size: 16px;
+        padding-right: 35px;
+    }
+    
+    .second-container {
+        width: 300px;
+    }
+
+    .second-container h1 {
+        font-size: 20px;
+    }
+
+    .container-monthly {
+        width: 100%;
+        padding-bottom: 30px;
+        border-radius: 0px;
+    }
+
+    .container-monthly p {
+        font-size: 17px;
+    }
+
+    .container-monthly button {
+        height: 50px;
+    }
+
+    .container-price p:first-child {
+        font-size: 30px;
+    }
+    
+    .container-price p:last-child {
+        font-size: 15px;
+    }
+
+    .container-monthly p {
+        font-size: 15px;
+    }    
+}
