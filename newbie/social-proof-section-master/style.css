@@ -12,21 +12,10 @@ body {
     margin: 0;
     height: inherit;
     position: relative;
-}
-
-.bg-top {
-    position: absolute;
-    left: 0;
-    top: 0;
-    z-index: 0;
-}
-
-.bg-bottom {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    height: 83%;
-    z-index: 0;
+    background-image: url(images/bg-pattern-bottom-desktop.svg), url(images/bg-pattern-top-desktop.svg);
+    background-repeat: no-repeat, no-repeat;
+    background-position: bottom right, top left;
+    background-size: 65%, 30%;
 }
 
 .top-part {
