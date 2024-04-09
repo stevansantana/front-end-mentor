@@ -20,8 +20,8 @@ body {
     display: flex;
     margin-top: 60px;
     justify-content: space-around;
-    margin-left: 80px;
-    margin-right: 80px;
+    margin-left: 70px;
+    margin-right: 70px;
     
 }
 
@@ -41,7 +41,6 @@ body {
     font-family: 'League Spartan';
     color: hsl(303, 10%, 53%);
     font-size: 15px;
-    width: 90%;
 }
 
 .container-stars-information {
