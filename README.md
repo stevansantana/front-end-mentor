@@ -1,4 +1,4 @@
-# front-end-mentor
+# Front end Mentor
 
 ## Repositório criado para o estudo de desenvolvimento front-end
 
