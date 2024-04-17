@@ -1,0 +1,149 @@
+@media only screen and (min-width: 992px) {
+    
+    header {
+        background-image: url(images/bg-header-desktop.png);
+    }
+
+    section h1 {
+        font-size: 36px;
+    }
+    
+    section h2 {
+        font-size: 32px;
+    }
+    
+    section h3 {
+        font-size: 26px;
+    }   
+    
+    section p {
+        font-size: 18px;
+        width: 70%;
+    }
+
+    .button-container {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .green-button, .blue-button {
+        width: 25%;
+    }
+
+    .green-button {
+        margin-bottom: 0;
+        margin-right: 20px;
+    }
+
+    .image-text {
+        display: flex;
+        margin-top: 50px;
+    }
+
+    .second-section-text {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .second-section-text h3 {
+        text-align: left;
+        margin-left: 0px; 
+    }
+    
+    .second-section-text p {
+        width: 80%;
+        text-align: left;
+        margin-left: 0px;
+        margin-bottom: 0px;
+    }
+
+    .icons-text {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .icons-text div {
+        width: 33.33%;
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+
+    .icons-text p {
+        width: 100%;
+        margin: 0;
+        margin-top: 20px;
+    }
+
+    .images-section figure{
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    .images-section figure img {
+        width: 10%;
+        height: 10%;
+    }
+
+    footer {
+        flex-direction: row;
+        height: 150px;
+        justify-content: space-evenly;
+    }
+
+    footer .logo {
+        margin: 0;
+        width: 10%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    footer .logo img {
+        width: 80px;
+        height: 80px;
+        margin-top: 0px;
+    }
+
+    footer .icons {
+        margin: 0;
+        width: 20%;
+    }
+
+    #link1 {
+        margin-top: 0px;
+        grid-area: faqs;
+    }
+
+    #link2 {
+        margin-top: 0px;
+        grid-area: contact;
+    }
+
+    #link3 {
+        margin-top: 0px;
+        grid-area: privacy;
+    }
+
+    #link4 {
+        margin-top: 0px;
+        grid-area: kit;
+    }
+
+    #link5 {
+        margin-top: 0px;
+        grid-area: guide;
+    }
+
+    footer nav {
+        width: 60%;
+        display: grid;
+        column-gap: 50px;
+        row-gap: 12px;
+        grid-template-areas: 
+            'faqs privacy guide'
+            'contact kit .';
+    }
+}
