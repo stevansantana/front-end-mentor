@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    height: inherit;
+    background-color: hsl(210, 46%, 95%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: row;
+}
+
+main {
+    width: 280px;
+    height: 460px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.image-container {
+    height: 40%;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.text-container {
+    margin-top: 30px;
+}
+
+.text-container p:first-child {
+    font-family: 'Manrope';
+    font-size: 15px;
+    color: hsl(217, 19%, 35%);
+    font-weight: bold;
+    margin-bottom: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+#second-paragraph {
+    font-family: 'Manrope';
+    font-size: 12px;
+    color: hsl(214, 17%, 51%);
+    padding-right: 8px;
+    padding-left: 20px;
+    padding-right: 27px;
+}
+
+#avatar-section {
+    display: flex;
+    align-items: center;
+    margin-top: 25px;
+    border-radius: 0px 0px 10px 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 13px;
+    padding-bottom: 13px;
+    justify-content: space-between;
+}
+
+#container-photo-text {
+    display: flex;
+    align-items: center;
+}
+
+#avatar-michelle {
+    width: 35px;
+    border-radius: 50%;
+    height: 35px;
+}
+
+#paragraph-container p {
+    margin: 0;
+    padding: 0;
+    margin-left: 10px;
+    font-family: 'Manrope';   
+}
+
+#paragraph-container p:first-child {
+    font-size: 12px;
+}
+
+#paragraph-container p:last-child {
+    font-size: 11px;
+    margin-top: 3px;
+    color: hsl(214, 17%, 51%);
+}
+
+#container-icon-share {
+    background-color: hsl(210, 46%, 95%);
+    padding: 6px;
+    border-radius: 50%;
+    margin-left: auto;
+    border: none;
+    cursor: pointer;
+}
+
+#container-icon-share img {
+    height: 12px;
+    width: 12px;
+}
+
+#container-social-media {
+    display: none;
+}
+
+@media only screen and (min-width: 900px) {
+
+    main {
+        display: flex;
+        width: 80%;
+        height: 364px;
+    }
+
+    .image-container {
+        width: 80%;
+        height: 100%;
+
+    }
+    .image-container img {
+        border-radius: 10px 0px 0px 10px;
+    }
+
+    .text-container p:first-child {
+        font-size: 30px;
+    }
+    
+    #second-paragraph {
+        font-size: 18px;
+    }   
+
+    #avatar-section {
+        border-radius: 0px 0px 10px 0px;
+    }
+
+    #avatar-section img {
+        width: 70px;
+        height: 70px;
+    }
+
+    #paragraph-container p:first-child {
+        font-size: 18px;
+    }
+    
+    #paragraph-container p:last-child {
+        font-size: 16px;
+    }
+
+    #container-icon-share {
+        margin-left: auto;
+        margin-right: 60px;
+    }
+    
+    #container-icon-share img {
+        height: 30px;
+        width: 30px;           
+    }
+
+    .show-container-social-media {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        position: relative;
+    }
+
+    #container-icon-share {
+        position: absolute;
+    }
+
+    #container-social-media {
+        background-color: hsl(217, 19%, 35%);
+        display: none;
+        justify-content: space-around;
+        align-items: center;
+        padding: 10px;
+        border-radius: 10px;
+        width: 270px;
+        height: 70px;
+        position: absolute;
+        margin-bottom: 150px;
+        margin-right: 60px;
+    }
+
+    #container-social-media::after {
+       position: absolute;
+       content: "";
+       height: 20px;
+       width: 20px;
+       background-color: hsl(217, 19%, 35%);
+       bottom: -8px;
+       left: 50%;
+       transform: translateX(-50%) rotate(45deg); 
+    }
+
+    #container-social-media p {
+        color: white;
+        margin-bottom: 0px;
+        font-family: 'Manrope';
+        letter-spacing: 5px;
+        opacity: 0.5;
+        font-size: 18px;
+    }
+
+    #container-social-media img {
+        height: 30px;
+        width: 30px;
+        cursor: pointer;
+    }
+}
