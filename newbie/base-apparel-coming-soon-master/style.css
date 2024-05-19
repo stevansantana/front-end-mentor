@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: linear-gradient(hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+}
+
+header {
+    padding: 25px;
+}
+
+header img {
+    width: 100px;
+}
+
+.image-container {
+    max-width: 100%;
+    height: auto;
+}
+
+.image-container img {
+    width: 100%;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    font-family: 'Josefin Sans';
+    text-align: center;
+    font-size: 40px;
+    margin-top: 50px;
+    letter-spacing: 5px;
+    color: hsl(0, 36%, 70%);
+    font-weight: 300;
+
+}
+
+p {
+    text-align: center;
+    margin-top: 15px;
+    font-family: 'Josefin Sans';
+    font-size: 12.5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    line-height: 20px;
+    color: hsl(0, 36%, 70%);
+}
+
+form {
+    margin-top: 35px;
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+form input {
+    width: 100%;
+    height: 45px;
+    border-radius: 50px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: hsla(0, 36%, 70%, 0.541);
+    padding: 13px;
+    padding-left: 20px;
+    background-color: transparent;
+    color: hsl(0, 36%, 70%);
+}
+
+form input::placeholder {
+    color: hsl(0, 36%, 70%);
+    opacity: 0.5;
+    font-family: 'Josefin Sans';
+}
+
+button {
+    width: 50px;
+    height: 45px;
+    background-image: linear-gradient(to right, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+    border-radius: 30px;
+    border: none;
+    position: absolute;
+    right: 0;
+    margin-right: 20px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+button:hover {
+    cursor: pointer;
+    width: 60px;
+    transition: width 0.1s linear 0.1s;
+    
+    background: hsla(0, 85%, 87%, 0.897);
+}
+
+button div {
+    width: 15px;
+    height: 15px;
+    border-top-color: white;
+    border-top-style: solid;
+    border-top-width: 2px;
+    border-right-color: white;
+    border-right-style: solid;
+    border-right-width: 2px;
+    transform: rotate(45deg);
+    margin-right: 8px;
+}
+
+@media only screen and (min-width: 992px) {
+
+    header {
+        grid-area: header;
+        margin-left: 80px;
+        margin-top: 50px;
+        padding: 0;
+    }
+
+    header img {
+        width: 180px;
+    }
+
+    .image-container {
+        grid-area: image;
+    }
+
+    .image-container img {
+        height: 100%;       
+    }
+
+    section {
+        grid-area: section;
+        margin: 50px 80px 30px 80px;
+    }
+    
+    section h1 {
+        font-size: 50px;
+        text-align: start;
+        margin-bottom: 20px;
+        margin-right: 180px;
+    }
+
+    section p {
+        text-align: start;
+        padding: 0;
+        font-size: 30px;
+        line-height: 40px;
+    }
+
+    section form {
+        padding-left: 0;
+    }
+
+    section form input {
+        height: 60px;
+        font-size: 25px;
+    }
+
+    section form input::placeholder {
+        font-size: 25px;
+    }
+
+    button {
+        width: 90px;
+        height: 60px;
+    }
+
+    button:hover {
+        width: 120px;
+    }
+
+    button div {
+        width: 20px;
+        height: 20px;
+        border-top-width: 5px;
+        border-right-width: 5px;
+    }
+    
+
+    body {
+        display: grid;
+        grid-template-areas: 
+            'header image'
+            'section image';
+    }
+}
