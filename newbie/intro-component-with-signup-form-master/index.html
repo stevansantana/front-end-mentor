@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Intro Component</title>
+  <link rel="shortcut icon" href="images/favicon-32x32.png" type="image/x-icon">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <section id="text-section">
+      <h1>
+        Learn to code by watching others
+      </h1>
+      <p>
+        See how experienced developers solve problems in real-time. Watching scripted tutorials is great, but understanding how developers think is invaluable.
+      </p>
+    </section>
+    <section id="pay-section">
+      <article>
+        <p>
+          <span style="font-weight: bold;">
+            Try it free 7 days
+          </span>
+        then $20/mo. thereafter
+      </p>
+      </article>
+      <article id="form-container">
+        <form action="#" id="form">
+          <div class="container-input-img">
+            <input type="text" id="fname" name="fname" placeholder="First Name" required onkeyup="checkName()">
+            <img src="images/icon-error.svg" alt="icon-error" class="icon-error">
+          </div>
+  
+         <div class="container-input-img">
+            <input type="text" id="fLastName" name="fLastName" placeholder="Last Name" required onkeyup="checkLastName()">
+            <img src="images/icon-error.svg" alt="icon-error" class="icon-error">
+         </div>
+  
+         <div class="container-input-img">
+            <input type="email" id="femail" name="femail" placeholder="Email Address" required onkeyup="checkEmail()">
+            <img src="images/icon-error.svg" alt="icon-error" class="icon-error">
+         </div>
+  
+         <div class="container-input-img">
+            <input type="password" id="fpassword" name="fpassword" placeholder="Password" required onkeyup="checkPassword()">
+            <img src="images/icon-error.svg" alt="icon-error" class="icon-error">
+         </div>
+  
+          <input type="submit" id="fsubmit" name="fsubmit" value="CLAIM YOUR FREE TRIAL" required>
+        </form>
+        <p>
+          By clicking the button, you are agreeing to our
+          <span style="font-weight: bold; color: hsl(0, 100%, 74%)">
+            Terms and Services
+          </span>
+        </p>
+      </article>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>

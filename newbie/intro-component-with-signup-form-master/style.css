@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(images/bg-intro-mobile.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    background-color: hsl(0, 100%, 74%);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 70px 12px 70px 12px;
+}
+
+#text-section {
+    text-align: center;
+    color: white;
+    font-family: 'Poppins';
+}
+
+#text-section h1 {
+    margin-bottom: 15px;
+}
+
+#text-section p {
+    font-size: 14px;
+}
+
+#pay-section {
+    margin-top: 40px;
+    text-align: center;
+    color: white;
+    font-family: 'Poppins';
+}
+
+#pay-section article:first-child {
+    background-color: hsl(248, 32%, 49%);
+    border-radius: 10px;
+    padding: 15px;
+    font-family: 'Poppins';
+    margin-bottom: 30px;
+    font-size: 14px;
+    box-shadow: 0px 8px hsla(249, 10%, 26%, 0.144);
+}
+
+#form-container {
+   background-color: white; 
+   border-radius: 10px;
+   box-shadow: 0px 8px hsla(249, 10%, 26%, 0.144);
+   padding: 7px;
+}
+
+#form-container form input {
+    width: 90%;
+    padding: 15px 15px 15px 30px;
+    margin-top: 15px;
+    border-radius: 5px;
+    border: 1px solid hsl(246, 25%, 77%);
+    color: hsl(249, 10%, 26%);
+    font-family: 'Poppins';
+    font-weight: bold;
+}
+
+#form-container form input::placeholder {
+    color: hsl(249, 10%, 26%);
+    font-family: 'Poppins';
+    font-weight: 700;
+}  
+
+#form-container form div {
+    position: relative;
+}
+
+.icon-error {
+    position: absolute;
+    right: 0px;
+    top: 50%;
+    margin-right: 40px;
+    width: 15px;
+    visibility: hidden;
+}
+
+#form-container form input:last-child {
+    background-color: hsl(154, 59%, 51%);
+    border: none;
+    color: white;
+    font-weight: bold;
+    box-shadow: 0px 2px 2px hsl(153, 76%, 27%);
+}
+
+#form-container form input:last-child:hover {
+    cursor: pointer;
+    background-color: hsla(154, 59%, 51%, 0.623);
+    box-shadow: 0px 2px 2px hsla(154, 59%, 51%, 0.623);
+}
+
+#form-container p {
+    font-size: 10px;
+    color: hsl(246, 25%, 77%);
+    text-align: center;
+    margin-top: 15px;
+    font-size: 10px;
+    padding: 0px 30px 15px 30px;
+}
+
+@media only screen and (min-width: 992px) {
+
+    html {
+        height: 100%;
+    }
+
+    body {
+        height: 100%;
+        background-image: url(images/bg-intro-desktop.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    main {
+        flex-direction: row;
+        padding: 0;
+    }
+
+    #text-section {
+        margin-left: 150px;
+        margin-right: 100px;
+    }
+
+    #text-section h1 {
+        font-size: 50px;
+        text-align: start;
+        line-height: 55px;
+    }
+
+    #text-section p {
+        font-size: 15px;
+        text-align: start;
+        margin-top: 30px;
+    }
+
+    #pay-section {
+        margin-right: 130px;
+        margin-top: 0px;
+    }
+    
+    #form-container {
+       width: 500px;      
+    }
+
+    #form-container p {
+        padding-bottom: 0px;
+    }
+
+    #form-container p:last-child{
+        padding-bottom: 15px;
+    }
+}
