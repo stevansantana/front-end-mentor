@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ping Comming Soon</title>
+  <link rel="shortcut icon" href="images/favicon-32x32.png" type="image/x-icon">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <img src="images/logo.svg" alt="logo">
+    <h1>We are lauching <span>soon!</span></h1>
+    <p>Subscribe and get notified</p>
+  </header>
+
+  <section id="form-container">
+    <form action="#" name="myForm" method="post" id="form" onsubmit="return validateForm()">
+      <div id="email-container">
+        <input type="email" placeholder="Your email address..." id="femail" name="email" onkeyup="focusEmail(this)">
+        <p id="emailMenssageError">Please provide a valid email address</p>
+      </div>
+     
+      <input type="submit" value="Notify Me" id="fsubmit">
+    </form>
+  </section>
+
+  <article id="container-illustration">
+    <img src="images/illustration-dashboard.png" alt="illustration-dashboard">
+  </article>
+
+  <footer>
+    <section>
+      <div>
+        <img src="symbols/facebook-f.svg" alt="facebook-logo">
+      </div>
+
+      <div>
+        <img src="symbols/twitter.svg" alt="twitter-logo">
+      </div>
+
+     <div>
+      <img src="symbols/instagram.svg" alt="instagram-logo">
+    </div>
+    </section>
+
+    <article>
+      <img src="symbols/copyright-regular.svg" alt="copyright-regular">
+      <p>Copyright Ping. All rights reserved.</p>
+    </article>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>

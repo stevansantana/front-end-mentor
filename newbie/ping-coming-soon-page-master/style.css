@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: white;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+header img {
+    margin-top: 80px;
+    margin-bottom: 40px;
+}
+
+header h1 {
+    font-family: 'Libre Franklin';
+    font-size: 25px;
+    color: hsl(0, 0%, 59%);
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+header h1 span {
+    color: hsl(209, 33%, 12%);
+    font-weight: 700;
+}
+
+header p {
+    font-family: 'Libre Franklin';
+    font-size: 12px;
+    color: hsl(209, 33%, 12%);
+    font-weight: 500;
+}
+
+#form-container {
+    margin-top: 30px;
+    margin-bottom: 80px;
+}
+
+#form-container form {
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+#form-container form input {
+    height: 40px;
+    border-radius: 20px;
+    border: none;
+}
+
+#form-container form #femail {
+    margin-bottom: 10px;
+    border: 1px solid hsl(223, 100%, 88%);
+    padding-left: 30px;
+    font-family: 'Libre Franklin';
+    color: hsl(209, 33%, 12%);
+    width: 100%;
+}
+
+#form-container form #femail::placeholder {
+    font-family: 'Libre Franklin';
+    color: hsl(223, 100%, 88%);   
+}
+
+#emailMenssageError {
+    color: hsl(354, 100%, 66%);
+    font-style: italic;
+    font-family: 'Libre Franklin';
+    text-align: center;
+    font-size: 12px;
+    display: none;
+}
+
+#form-container form #fsubmit {
+    background-color: hsl(223, 87%, 63%);
+    font-family: 'Libre Franklin';
+    color: white;
+    font-weight: 600;
+    box-shadow: 2px 7px 12px hsla(223, 87%, 63%, 0.486);
+}
+
+#form-container form #fsubmit:hover {
+    cursor: pointer;
+    background-color: hsla(223, 87%, 63%, 0.76);
+    box-shadow: 2px 7px 12px hsla(223, 87%, 63%, 0.486);
+}
+
+#container-illustration {
+    max-width: 100%;
+    height: auto;
+    padding: 0px 12px 0px 12px;
+}
+
+#container-illustration img {
+    width: 100%;
+}
+
+footer {
+    margin-top: 120px;
+}
+
+footer section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer section div {
+    border: 1px solid hsl(223, 100%, 88%);
+    padding: 10px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+}
+
+footer section div:hover {
+    cursor: pointer;
+    background-color: hsl(223, 87%, 63%);
+    border: none;
+}
+
+footer section div img {
+    width: 15px;
+    height: 15px;
+    filter: invert(39%) sepia(87%) saturate(1407%) hue-rotate(208deg) brightness(99%) contrast(93%);
+}
+
+footer section div:hover > img {
+    filter: invert(99%) sepia(0%) saturate(7486%) hue-rotate(80deg) brightness(105%) contrast(100%);
+}
+
+footer article {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+footer article img {
+    width: 12px;
+    height: 12px;
+    filter: invert(61%) sepia(14%) saturate(16%) hue-rotate(343deg) brightness(96%) contrast(85%);
+}
+
+footer article p {
+    margin-left: 3px;
+    font-family: 'Libre Franklin';
+    color: hsl(0, 0%, 59%);
+    font-size: 15px;
+}
+
+@media only screen and (min-width: 900px) {
+    
+    header h1 {
+        font-size: 40px;
+        margin-bottom: 10px;
+    }
+
+    header p {
+        font-size: 16px;
+    }
+
+    #form-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #form-container form {
+        flex-direction: row;
+    }
+
+    #form-container form #femail {
+        width: 350px;
+        margin-right: 10px;
+    }
+
+    #form-container form #fsubmit {
+        width: 200px;
+    }
+
+    #container-illustration {
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #container-illustration img {
+        width: 50%;
+    }
+}
