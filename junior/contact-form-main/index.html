@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Form</title>
+  <link rel="shortcut icon" href="assets/images/favicon-32x32.png" type="image/x-icon">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div id="message-success">
+    <div id="img-text">
+      <img src="assets/images/icon-success-check.svg" alt="icon-success-check">
+      <p>Message Sent!</p>
+    </div>
+
+    <p>Thanks for completing the form. We'll be in touch soon!</p>
+  </div>
+
+  <main>
+    <h1>Contact Us</h1>
+    <form name="myForm" id="myForm" onsubmit="return validateForm()">
+      <div class="col-2">
+        <div class="container-input-label">
+          <div class="label-container">
+            <label for="fname">First Name<span>*</span></label>
+          </div>
+  
+          <div>
+            <input type="text" name="fname" id="fname" onkeyup="typeName()">
+
+            <p class="message-error">This field is required</p>
+          </div>
+        </div>
+  
+        <div class="container-input-label">
+          <div class="label-container">
+            <label for="fLastName">Last Name<span>*</span></label>
+          </div>
+        
+         <div>
+           <input type="text" name="fLastName" id="fLastName" onkeyup="typeLastName()">
+
+           <p class="message-error">This field is required</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="container-input-label">
+        <div class="label-container">
+          <label for="femail">Email Address<span>*</span></label>
+        </div>
+
+        <div>
+          <input type="email" name="femail" id="femail" onkeyup="typeEmail()">
+
+          <p class="message-error">Please enter a valid email address</p>
+        </div>
+      </div>
+
+      <div class="container-input-label">
+       <div class="label-container">
+          <label for="query">Query Type<span>*</span></label>
+       </div>
+
+        <div class="col-2">
+          <div class="radio-container" tabindex="0">
+            <input type="radio" id="general" name="general-support" value="general" onclick="typeRadio()">
+    
+            <label for="general">General Enquiry</label>
+          </div>
+  
+          <div class="radio-container" tabindex="0">
+            <input type="radio" id="support" name="general-support" value="support" onclick="typeRadio()">
+  
+            <label for="support">Support Request</label>
+          </div>
+        </div>
+
+        <p class="message-error">Please select a query type</p>
+      </div>
+
+      <div class="container-input-label">
+        <div class="label-container">
+          <label for="fmessage">Message<span>*</span></label>
+        </div>
+      
+        <div>
+          <textarea name="fmessage" id="fmessage" rows="15" cols="20" onkeyup="typeMessage()"></textarea>
+        </div>
+
+        <p class="message-error">This field is required</p>
+      </div>
+
+      <div class="container-input-label">
+        <div class="container-consent">
+          <input type="checkbox" id="fconsent" name="fconsent" onclick="typeCheckbox()">
+           
+          <label for="fconsent">I consent to being contacted by the team<span>*</span></label>
+        </div>
+        <p class="message-error">To submit this form, please consent to being contacted</p>
+      </div>
+
+      <input type="submit" name="fsubmit" id="fsubmit" value="Submit">
+    </form>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>

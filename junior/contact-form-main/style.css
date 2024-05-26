@@ -1,0 +1,277 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: hsl(148, 38%, 91%);
+    padding: 103px 15px 103px 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 0;
+}
+
+main {
+    background-color: hsl(0, 0%, 100%);
+    padding: 15px;
+    border-radius: 10px;
+}
+
+h1, label {
+    font-family: 'Karla';
+    color: hsl(187, 24%, 22%);
+}
+
+h1 {
+    margin-bottom: 30px;
+}
+
+span {
+    margin-left: 7px;
+    color: hsl(169, 82%, 27%);
+}
+
+input:not(#general):not(#support):not(#fconsent):not(#fsubmit) {
+    height: 40px;
+    border-radius: 5px;
+    border: 1px solid black;
+    width: 100%;
+    border-color: hsl(186, 15%, 59%);
+    padding: 10px;
+}
+
+input:not(#general):not(#support):not(#fconsent):not(#fsubmit):hover {
+    cursor: pointer;
+    border: 1px solid hsl(169, 84%, 41%);
+}
+
+input:not(#general):not(#support):not(#fconsent):not(#fsubmit):focus {
+    outline: none;
+    border: 2px solid hsl(169, 84%, 41%);
+}
+
+textarea {
+    width: 100%;
+    border-color: hsl(186, 15%, 59%);
+    border-radius: 5px;
+    resize: none;
+    padding: 10px;
+    border-width: 1px;
+}
+
+textarea:hover {
+    border: 1px solid hsl(169, 84%, 41%);
+}
+
+textarea:focus {
+    outline: none;
+    border: 2px solid hsl(169, 84%, 41%);
+}
+
+.label-container {
+    margin-bottom: 8px;
+}
+
+.radio-container {
+    display: flex;
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin-top: 15px;
+    border-color: hsl(186, 15%, 59%);
+    position: relative;
+}
+
+.radio-container:hover {
+    cursor: pointer;
+    border: 1px solid hsl(169, 84%, 41%);   
+}
+
+.radio-container:focus {
+    background-color: hsl(148, 38%, 91%);
+    outline: none;
+}
+    
+.radio-container label {
+    width: 100%;
+    padding: 10px;
+    padding-left: 50px;
+}
+
+.radio-container:hover > label {
+    cursor: pointer;
+}
+
+input[type="radio"] {
+    appearance: none;
+    height: 20px;
+    width: 20px;
+    border: 2px solid hsl(186, 15%, 59%);
+    cursor: pointer;
+    border-radius: 50%;
+    margin: 0px 10px 0px 18px;
+    position: absolute;
+    margin: 0;
+    margin-left: 15px;
+}
+
+input[type="radio"]:checked {
+    background-image: url("assets/images/icon-radio-selected.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    border: none;
+}
+
+.container-consent {
+    display: flex;
+    align-items: center;
+}
+
+.container-consent label {
+    padding-left: 15px;
+    cursor: pointer;
+}
+
+input[type="checkbox"] {
+    appearance: none;
+    height: 18px;
+    width: 18px;
+    border: 2px solid hsl(186, 15%, 59%);
+    cursor: pointer;
+}
+
+input[type="checkbox"]:checked {
+    background-image: url("assets/images/icon-checkbox-check.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    border: none;
+}
+
+.container-input-label {
+    margin-bottom: 30px;
+}
+ 
+#fsubmit {
+    width: 100%;
+    color: hsl(0, 0%, 100%);
+    background-color: hsl(169, 82%, 27%);
+    font-family: 'Karla';
+    font-weight: 700;
+    font-size: 16px;
+    border: none;
+    height: 45px;
+    border-radius: 8px;
+}
+
+#fsubmit:hover {
+    cursor: pointer;
+    background-color: hsl(169, 85%, 10%);
+}
+
+.message-error {
+    color: hsl(0, 66%, 56%);
+    font-family: 'Karla';
+    margin-top: 10px;
+    display: none;
+}
+
+#message-success {
+    background-color: hsl(187, 24%, 22%);
+    padding: 20px;
+    width: 250px;
+    border-radius: 10px;
+    position: absolute;
+    top: 0.5%;
+    z-index: 1;
+    display: none;
+}
+
+#message-success div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+#message-success div img {
+    margin-right: 10px;
+}
+
+#message-success #img-text p {
+    font-family: 'Karla';
+    color: hsl(0, 0%, 100%);
+    font-weight: bold;
+}
+
+#message-success p {
+    font-family: 'Karla';
+    color: hsl(0, 0%, 100%);
+    font-size: 12px;
+}
+
+@media only screen and (max-width: 430px) {
+    #message-success {
+        width: 200px;
+        top: 0.5%;
+    }
+
+    #message-success p {
+        font-family: 'Karla';
+        color: hsl(0, 0%, 100%);
+        font-size: 12px;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 100px 0px 100px 0px;
+    }
+
+    main {
+        width: 60%;
+        padding: 50px;
+    }
+
+    textarea {
+        height: 120px;
+    }
+
+    .col-2 {
+        display: flex;
+        width: 100%;
+    }
+
+    .col-2 .container-input-label, .radio-container {
+        width: 50%;
+    }
+
+    .col-2 .container-input-label:first-child, .radio-container:first-child  {
+        margin-right: 20px;
+    }
+
+    .radio-container {
+        margin-top: 0px;
+    }
+
+    #message-success {
+        width: 400px;
+        top: 1.5%;
+    }  
+    
+    #message-success #img-text p {
+        font-size: 15px;
+    }
+    
+    #message-success p {
+        font-size: 13px;
+    }
+}
