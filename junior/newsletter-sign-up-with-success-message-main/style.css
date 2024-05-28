@@ -1,0 +1,303 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: hsl(0, 0%, 100%);
+}
+
+#image-container {
+    max-width: 100%;
+    height: auto;
+}
+
+#image-container img {
+    width: 100%;
+}
+
+#text-container {
+    padding: 15px;
+    font-family: 'Roboto';
+}
+
+#text-container h1 {
+    color: hsl(234, 29%, 20%);
+    font-size: 32px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+#text-container p {
+    color: hsl(234, 29%, 20%);
+    font-size: 13px;
+    line-height: 20px;
+}
+
+#text-container ul {
+    margin-top: 20px;
+}
+
+#text-container ul li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+#text-container ul li p {
+    font-size: 13px;
+}
+
+#text-container ul li img {
+    margin-right: 15px;
+    align-self: flex-start;
+}
+
+#text-container form {
+    margin-top: 35px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+#text-container form label {
+    font-family: 'Roboto';
+    font-size: 11px;
+    color: hsl(234, 29%, 20%);
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+}
+
+#error-message {
+    color: hsl(4, 100%, 67%);
+    display: none;
+}
+
+#text-container form input {
+    margin-top: 10px;
+    height: 40px;
+    border-radius: 5px;
+}
+
+#text-container form #email {
+    border: 1px solid hsl(231, 7%, 60%);
+    padding-left: 20px;
+    padding-right: 20px;
+    font-family: 'Roboto';
+    outline: none;
+}
+
+#text-container form #email:hover {
+    cursor: pointer;
+    border-color: hsl(228, 10%, 29%);
+}
+
+#text-container form #submit {
+    border: none;
+    color: hsl(0, 0%, 100%);
+    background-color: hsl(234, 29%, 20%);
+    font-weight: bold;
+    font-family: 'Roboto';
+    margin-top: 20px;
+}
+
+#text-container form #submit:hover {
+    cursor: pointer;
+    background-image: linear-gradient(to left, hsl(4, 100%, 67%), hsl(337, 100%, 50%));
+    box-shadow: 
+        0 3px 20px hsla(4, 100%, 67%, 0.3), 
+        0 6px 20px hsla(337, 100%, 50%, 0.2);
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+
+    #text-container h1 {
+        font-size: 60px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    
+    #text-container p {
+        font-size: 23px;
+        line-height: 30px;
+    }
+    
+    #text-container ul {
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    
+    #text-container ul li {
+        margin-bottom: 10px;
+    }
+    
+    #text-container ul li p {
+        font-size: 23px;
+    }
+    
+    #text-container ul li img {
+        width: 30px;
+        height: 30px;
+    }
+    
+    #text-container form {
+        margin-bottom: 30px;
+    }
+    
+    #text-container form label {
+        font-size: 21px;
+    }
+    
+    #text-container form input {
+        height: 60px;
+    }
+    
+    #text-container form #email {
+        font-size: 23px;
+    }
+    
+    #text-container form #submit {
+        font-size: 23px;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+
+    #text-container h1 {
+        font-size: 85px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    
+    #text-container p {
+        font-size: 30px;
+        line-height: 40px;
+    }
+    
+    #text-container ul {
+        margin-top: 60px;
+        margin-bottom: 60px;
+    }
+    
+    #text-container ul li {
+        margin-bottom: 40px;
+    }
+    
+    #text-container ul li p {
+        font-size: 30px;
+    }
+    
+    #text-container ul li img {
+        width: 40px;
+        height: 40px;
+    }
+    
+    #text-container form {
+        margin-bottom: 30px;
+    }
+    
+    #text-container form label {
+        font-size: 29px;
+    }
+    
+    #text-container form input {
+        height: 70px;
+    }
+    
+    #text-container form #email {
+        font-size: 30px;
+    }
+    
+    #text-container form #submit {
+        font-size: 30px;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+
+    html, body {
+        height: 100%;
+    }
+
+    body {
+        background-color: hsl(234, 29%, 20%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    main {
+        display: flex;
+        background-color: hsl(0, 0%, 100%);
+        border-radius: 40px;
+    }
+
+    #image-container {
+        padding: 20px;
+        width: 50%;
+        order: 2;
+    }
+
+    #text-container {
+        padding: 60px 40px 60px 40px;
+        width: 50%;
+        order: 1;
+    }
+
+    #text-container h1 {
+        font-size: 55px;
+        margin-top: 0px;
+        margin-bottom: 10px;
+    }
+    
+    #text-container p {
+        font-size: 15px;
+        line-height: 25px;
+    }
+    
+    #text-container ul {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    
+    #text-container ul li {
+        margin-bottom: 10px;
+    }
+    
+    #text-container ul li p {
+        font-size: 15px;
+    }
+    
+    #text-container ul li img {
+        width: 23px;
+        height: 23px;
+        align-self: center;
+    }
+    
+    #text-container form {
+        margin-bottom: 0px;
+    }
+    
+    #text-container form label {
+        font-size: 14px;
+    }
+    
+    #text-container form input {
+        height: 45px;
+    }
+    
+    #text-container form #email {
+        font-size: 14px;
+    }
+    
+    #text-container form #submit {
+        font-size: 14px;
+    }
+}
