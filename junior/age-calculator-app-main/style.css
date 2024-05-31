@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    background-color: hsl(0, 0%, 86%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    background-color: hsl(0, 0%, 100%);
+    width: 300px;
+    height: 420px;
+    border-radius: 10px 10px 100px 10px;
+}
+
+#date-input-container {
+    display: flex;
+    margin-top: 30px;
+}
+
+.date-input {
+    width: 33.33%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.date-input label {
+    align-self: flex-start;
+    margin-left: 16px;
+    margin-bottom: 5px;
+    font-size: 10px;
+    font-family: 'Poppins';
+    color: hsl(0, 1%, 44%);
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.date-input input {
+    width: 70%;
+    height: 40px;
+    border-radius: 5px;
+    border: 1px solid hsl(0, 0%, 86%);
+    padding-left: 10px;
+    font-family: 'Poppins';
+    color: hsl(0, 0%, 8%);
+    caret-color: hsl(259, 100%, 65%);
+    font-weight: bold;
+    outline: none;
+}
+
+.date-input input::placeholder {
+    color: hsl(0, 0%, 60%);
+    font-weight: 800;
+}
+
+.date-input input:hover {
+   cursor: pointer;
+}
+
+.date-input input:focus {
+    border: 1px solid hsl(259, 100%, 65%);
+}
+
+/* Remove as setas no Chrome, Safari, Edge e Opera */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+#icon-arrow-container {
+    margin-top: 50px;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+#icon-arrow-container button {
+    background-color: hsl(259, 100%, 65%);
+    padding: 10px;
+    border-radius: 50%;
+    border: none;
+    height: 60px;
+    width: 60px;
+    position: absolute;
+    top: -30px;
+    right: 115px;
+}
+
+#icon-arrow-container button:hover {
+    cursor: pointer;
+    background-color: hsl(0, 0%, 8%);
+}
+
+#icon-arrow-container img {
+    width: 30px;
+    height: 30px;    
+}
+
+hr {
+    margin-left: 20px;
+    margin-right: 20px;
+    opacity: 0.1;
+}
+
+#age-section {
+    padding-left: 20px;
+}
+
+#age-section p {
+    font-size: 45px;
+    font-family: 'Poppins';
+    color: hsl(0, 0%, 8%);
+    font-weight: bold;
+    font-style: italic;
+    font-weight: 800;
+}
+
+#age-section span {
+    color: hsl(259, 100%, 65%);   
+}
+
+.message-error {
+    margin-top: 3px;
+    align-self: flex-start;
+    margin-left: 19px;
+    letter-spacing: 2px;
+    font-size: 9px;
+    font-style: italic;
+    font-family: 'Poppins';
+    color: hsl(0, 100%, 67%);
+    display: none;
+}
+
+@media only screen and (min-width: 992px) {
+    
+    main {
+        width: 500px;
+    }
+
+    #date-input-container {
+        width: 80%;
+    }
+    
+    .date-input label {
+        margin-left: 22px;
+    }
+
+    #icon-arrow-container button {
+        right: 20px;
+    }
+
+    .message-error {
+       margin-left: 25px;
+    }
+}
