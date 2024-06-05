@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: hsl(0, 0%, 100%);
+}
+
+main {
+    padding: 10px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Plus Jakarta Sans';
+}
+
+.notifications-container {
+    font-size: 16px;
+}
+
+.notifications-container span:first-child {
+    color: hsl(224, 21%, 14%);
+    font-weight: 900;
+}
+
+#notifications-number {
+    background-color: hsl(219, 85%, 26%);
+    color: hsl(0, 0%, 100%);
+    padding: 3px 7px 3px 7px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 13px;
+    margin-left: 5px;
+}
+
+header a {
+    font-size: 12px;
+    color: hsl(219, 12%, 42%);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.new-notification {
+    display: flex;
+    align-items: center;
+    font-family: 'Plus Jakarta Sans';
+    background-color: hsl(210, 60%, 98%);
+    margin-top: 15px;
+    padding: 15px 10px 15px 10px;
+    border-radius: 5px;
+    color: hsl(224, 21%, 14%);
+}
+
+.new-notification img {
+    width: 35px;
+    height: 35px;
+    margin-right: 10px;
+    margin-bottom: auto;
+}
+
+.notification-message {
+    width: 100%;
+}
+
+.notification-message span {
+    background-color: hsl(1, 90%, 64%);
+    height: 8px;
+    width: 8px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-left: 6px;
+}
+
+.notification-message p:first-child {
+    font-size: 12px;
+    line-height: 18px;
+}
+
+.name-link {
+    text-decoration: none;
+    color: hsl(224, 21%, 14%);
+    font-weight: bold;
+}
+
+.black-link {
+    text-decoration: none;
+    color: hsl(219, 12%, 42%);
+    font-weight: 700;
+}
+
+.blue-link {
+    text-decoration: none;
+    color: hsl(219, 85%, 26%);
+    font-weight: 700;
+}
+
+.time-message {
+    font-size: 10px;
+    margin-top: 5px;
+    color: hsl(219, 12%, 42%);
+}
+
+.old-notification {
+    display: flex;
+    align-items: center;
+    font-family: 'Plus Jakarta Sans';
+    margin-top: 15px;
+    padding: 15px 10px 15px 10px;
+    border-radius: 5px;
+    color: hsl(224, 21%, 14%);
+}
+
+.old-notification img {
+    width: 35px;
+    height: 35px;
+    margin-right: 10px;
+    margin-bottom: auto;
+}
+
+textarea {
+    margin-top: 10px;
+    resize: none;
+    width: 100%;
+    padding: 10px;
+    font-family: 'Plus Jakarta Sans';
+    font-size: 12px;
+    border: 1px solid hsl(205, 33%, 90%);
+    border-radius: 5px;
+    color: hsl(224, 21%, 14%);
+    line-height: 18px;
+    outline: none;
+    cursor: pointer;
+}
+
+#image-chess {
+    margin-left: auto;
+    margin-right: 0px;
+}
+
+@media only screen and (min-width: 900px) {
+    
+    body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: hsl(210, 60%, 98%);
+        padding: 50px 0px 50px 0px;
+    }
+
+    main {
+        background-color: hsl(0, 0%, 100%);     
+        padding: 30px;
+        border-radius: 10px;
+    }
+}
