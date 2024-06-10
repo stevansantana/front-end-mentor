@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Card</title>
+  <link rel="shortcut icon" href="images/favicon-32x32.png" type="image/x-icon">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+  <div class="bg-card">
+    <img src="images/bg-card-back.png" alt="bg-card-back" id="card-back">
+    <p id="card-back-cvc">000</p>
+
+    <img src="images/bg-card-front.png" alt="bg-card-front" id="card-front">
+
+    <img src="images/card-logo.svg" alt="card-logo" id="card-logo">
+
+    <p id="card-front-number">0000 0000 0000 0000</p>
+    <p id="card-front-name">Jane Appleseed</p>
+    <p id="card-front-month">00</p>
+    <p id="separate-slash">/</p>
+    <p id="card-front-year">00</p>
+  </div>
+
+  <div class="form-container">
+    <form action="success.html" method="get" id="myForm">
+  
+      <label for="name">CARDHOLDER NAME</label>
+      <input type="text" placeholder="e.g. Jane Appleseed" id="input-name" maxlength="20">
+      <p class="message-error"></p>
+  
+      <label for="number">CARD NUMBER</label>
+      <input type="text" placeholder="e.g. 1234 5678 9123 0000" id="card-number" maxlength="19">
+      <p class="message-error"></p>
+  
+      <div class="date-cvc-container">
+        <div class="month-year">
+          <label for="month">EXP. DATE</label>
+          <input type="text" placeholder="MM" id="exp-month" minlength="2" maxlength="2">
+          <p class="message-error"></p>
+        </div>
+  
+       <div class="month-year">
+          <label for="year">(MM/YY)</label>
+          <input type="text" placeholder="YY" id="exp-year" minlength="2" maxlength="2">
+       </div>
+  
+       <div class="cvc">
+          <label for="cvc">CVC</label>
+          <input type="text" placeholder="e.g. 123" id="cvc" maxlength="3">
+          <p class="message-error"></p>
+       </div>
+      </div>
+
+      <button type="submit" id="submit">Confirm</button>
+    </form>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
