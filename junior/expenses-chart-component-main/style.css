@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'DM Sans';
+}
+
+body, html {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: hsl(27, 66%, 92%);
+    padding: 0px 10px 0px 10px;
+}
+
+main {
+    width: 100%;
+}
+
+#first-section {
+    background-color: hsl(10, 79%, 65%);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+#first-section article p:first-child {
+    color: hsl(33, 100%, 98%);
+    opacity: .8;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+#first-section article p:last-child {
+    color: hsl(33, 100%, 98%);
+    font-size: x-large;
+    font-weight: bold;
+}
+
+#first-section figure img {
+    width: 50px;
+}
+
+#second-section {
+    background-color: hsl(33, 100%, 98%);
+    border-radius: 10px;
+    margin-top: 20px;
+    padding: 30px;
+}
+
+#second-section h1 {
+    font-size: 20px;
+    color: hsl(25, 47%, 15%);
+    margin-bottom: 40px;
+}
+
+#myChart {
+    max-height: 150px;
+    padding-bottom: 30px;
+    border-bottom: 3px solid hsla(10, 79%, 65%, 0.1);
+    cursor: pointer;
+}
+
+#container-price-information {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#container-price-information article:last-child {
+    display: flex;
+    flex-direction: column;
+    margin-top: 16px;
+}
+
+.month-information {
+    color: hsl(28, 10%, 53%);
+    font-size: 14px;
+}
+
+.month-price {
+    color: hsl(25, 47%, 15%);
+    font-weight: 600;
+}
+
+#month-total {
+    font-size: 27px;
+    margin-top: 5px;
+}
+
+#month-percentage {
+    font-size: 14px;
+    margin-left: auto;
+}
+
+@media only screen and (min-width: 420px) {
+    .bar {
+        width: 40px;
+    }
+
+    .day {
+        font-size: 12px;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+
+    .bar {
+        width: 65px;
+    }
+    
+    .day {
+        font-size: 15px;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+
+    .bar {
+        width: 85px;
+    }
+    
+    .day {
+        font-size: 18px;
+    }   
+}
+
+@media only screen and (min-width: 992px) {
+
+} 
+
+@media only screen and (min-width: 900px) {
+
+    body {
+        padding: 0;
+    }
+
+    main {
+        width: 420px;
+    }
+
+    #second-section h1 {
+        font-size: 25px;
+    }
+
+    .bar {
+        width: 35px;
+    }
+    
+    .day {
+        font-size: 12px;
+    }
+
+    #month-total {
+        margin-top: 0px;
+        font-size: 40px;
+    }
+}

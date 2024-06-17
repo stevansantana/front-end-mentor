@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Expenses Chart</title>
+  <link rel="shortcut icon" href="images/favicon-32x32.png" type="image/x-icon">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <section id="first-section">
+      <article>
+        <p>My balance</p>
+        <p>$921.48</p>
+      </article>
+
+      <figure>
+        <img src="images/logo.svg" alt="logo">
+      </figure>
+    </section>
+
+    <section id="second-section">
+      <h1>Spending - Last 7 days</h1>
+
+      <canvas id="myChart"></canvas>
+
+      <section id="container-price-information">
+        <article>
+          <p class="month-information">Total this month</p>
+          <p class="month-price" id="month-total">$478.33</p>
+        </article>
+  
+        <article>
+          <p class="month-price" id="month-percentage">+2.4%</p>
+          <p class="month-information">from last month</p>
+        </article>
+
+      </section>
+    </section>
+  </main>
+
+  <script src="script.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+</body>
+</html>
