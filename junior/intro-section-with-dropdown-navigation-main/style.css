@@ -1,0 +1,399 @@
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Epilogue';
+}
+
+body {
+    background-color: hsl(0, 0%, 98%);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 65%;
+    height: 100%;
+    background-color: hsl(0, 0%, 98%);
+    z-index: 999;
+    padding: 15px 20px 0px 20px;
+    display: none;
+}
+
+nav ul {
+    height: 45%;
+    display: flex;
+    flex-direction: column;
+}
+
+nav ul li {
+    list-style-type: none;
+    margin-bottom: 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: hsl(0, 0%, 41%);
+    font-size: 13px;
+    font-weight: 500;
+}
+
+nav ul li a:hover {
+    color: hsl(0, 0%, 8%);
+}
+
+#logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#logo-container img {
+    cursor: pointer;
+}
+
+#icon-menu {
+    cursor: pointer;
+}
+
+#icon-close-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 25px;
+}
+
+#icon-close-container img {
+    cursor: pointer;
+}
+
+#login-button {
+    text-align: center;
+    margin-top: auto;
+}
+
+#container-register-button {
+    text-align: center;
+    margin-bottom: 0px;
+}
+
+#register-button {
+    width: 100%;
+    display: block;
+    border: 2px solid hsl(0, 0%, 41%);
+    padding: 10px 20px 10px 20px;
+    border-radius: 12px;
+}
+
+#menu-mobile-shadow {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); 
+    z-index: 998;
+    display: none;
+}
+
+.link-arrow {
+    display: inline-flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.link-arrow img {
+    width: 10px;
+    margin-left: 12px;
+}
+
+.icon-arrow-up {
+    display: none;
+}
+
+.content {  
+    margin: 10px 0px 10px 20px;
+    display: none; 
+}
+
+.content ul {
+    height: 100%;
+}
+
+.content ul li {
+    margin-bottom: 15px;
+}
+
+.content ul li a {
+    display: inline-flex;
+    align-items: center;
+}
+
+.content ul li a img {
+    margin-right: 15px;
+}
+
+#image-container {
+    width: 100%;
+    height: auto;
+}
+
+#image-hero-mobile {
+    width: 100%;
+}
+
+.text-section {
+    text-align: center;
+    padding: 15px;
+}
+
+.text-section h1 {
+    font-size: 28px;
+    margin: 20px 0px 15px 0px;
+}
+
+.text-section p {
+    font-size: 13px;
+    line-height: 20px;
+    color: hsl(0, 0%, 41%);
+    margin-bottom: 15px;
+}
+
+.text-section button {
+    padding: 10px 15px 10px 15px;
+    color: hsl(0, 0%, 98%);
+    background-color: hsl(0, 0%, 8%);
+    border: none;
+    font-weight: bold;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    cursor: pointer;
+}
+
+.text-section button:hover {
+    background-color: hsl(0, 0%, 98%);
+    color: hsl(0, 0%, 8%);
+    border: 1px solid hsl(0, 0%, 8%);
+}
+
+.client-images-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.client-images-container img {
+    width: 50px;
+}
+
+@media only screen and (min-width: 600px) {
+
+    nav ul li {
+        margin-bottom: 20px;
+    }
+
+    nav ul li a {
+        font-size: 18px;
+    }
+
+    .link-arrow img {
+        width: 15px;
+    }
+
+    .text-section h1 {
+        font-size: 40px;
+    }
+    
+    .text-section p {
+        font-size: 18px;
+        line-height: 25px;
+    }
+    
+    .text-section button {
+        font-size: 20px;
+    }
+    
+    .client-images-container img {
+        width: 100px;
+    }    
+}
+
+@media only screen and (min-width: 768px) {
+
+    .text-section h1 {
+        font-size: 60px;
+    }
+    
+    .text-section p {
+        font-size: 28px;
+        line-height: 35px;
+    }
+    
+    .text-section button {
+        font-size: 28px;
+    }
+    
+    .client-images-container img {
+        width: 120px;
+    } 
+
+}
+
+@media only screen and (min-width: 992px) {
+
+    header {
+        padding: 30px;
+        justify-content: initial;
+    }
+
+    nav {
+        display: initial;
+        position: initial;
+        width: 100%;
+        height: initial;
+        z-index: initial;
+        padding: 0px;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: row;
+    }
+
+    nav ul li {
+        list-style-type: none;
+        margin: 0px;
+        margin-left: 40px;
+    }
+
+    nav ul li a {
+        text-decoration: none;
+        color: hsl(0, 0%, 41%);
+        font-size: 18px;
+    }
+
+    main {
+        display: flex;
+        margin: 50px 80px 120px 50px;
+    }
+
+    #logo {
+        width: 95px;
+    }
+
+    #icon-close-container {
+        display: none;
+    }
+
+    #icon-menu {
+        display: none;
+    }
+
+    #login-button {
+        margin-top: 0px;
+        margin-left: auto;
+    }
+
+    #register-button {
+        width: initial;
+        display: initial;
+        border: 2px solid hsl(0, 0%, 41%);
+        padding: 10px 20px 10px 20px;
+        border-radius: 12px;
+    }
+
+    #register-button:hover {
+        border-color: hsl(0, 0%, 8%);
+    }
+
+    .link-arrow img {
+        margin-left: 4px;
+    }
+
+    .content {
+        position: relative;
+        margin: 0;
+    }
+
+    .content ul {
+        flex-direction: column;
+        margin: 0;
+        position: absolute;
+        right: -5px;
+        top: 40px;
+        height: initial;
+        padding: 20px;
+        border-radius: 10px;
+        background-color: white;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .content ul li {
+        margin-left: 0px;
+        width: 100%;
+    }
+
+    .content ul li:last-child {
+        margin-bottom: 0px;
+    }
+
+    #last-content-list {
+        width: 125px;
+        right: -20px;
+    }
+
+    #image-container {
+        order: 1;
+        display: flex;
+        justify-content: end;
+        margin-left: 50px;
+        height: 500px;
+    }
+
+    .text-section {
+        text-align: start;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 0px;
+        height: 600px;
+    }
+    
+    .text-section h1 {
+        font-size: 70px;
+        margin-bottom: 0px;
+        margin-top: 70px; 
+    }
+
+    .text-section p {
+        font-size: 22px;
+        line-height: 32px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+
+    .text-section button {
+        font-size: 19px;
+        width: 40%;
+        margin-bottom: 0px;
+    }
+
+    .client-images-container {
+        margin-bottom: 0px;
+        margin-top: auto;
+    }
+
+    .client-images-container img {
+        width: 90px;
+    }
+} 
