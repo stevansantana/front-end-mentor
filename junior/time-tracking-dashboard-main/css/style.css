@@ -1,0 +1,304 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Rubik';
+}
+
+body {
+    background-color: hsl(226, 43%, 10%);
+}
+
+main {
+    width: 100%;
+    padding: 0px 20px 0px 20px;
+    margin: 70px 0px 70px 0px;
+}
+
+figure img {
+    width: 70px;
+    border: 3px solid white;
+    border-radius: 50%;
+}
+
+.container {
+    height: 150px;
+    border-radius: 15px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.container:last-child {
+    margin-bottom: 0px;
+}
+
+.container-user {
+    height: 150px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.user-information {
+    height: 100px;
+    width: 100%;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    z-index: 1;
+}
+
+.user-name-container {
+    margin-left: 15px;
+}
+
+.user-name-container p:first-child {
+    font-size: 13px;
+    color: hsl(236, 100%, 87%);
+    margin-bottom: 5px;
+}
+
+.user-name-container p:last-child {
+    font-size: 20px;
+    color: white;
+    font-weight: 100;
+}
+
+.time-information {
+    height: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    z-index: 0;
+    border-radius: 0px 0px 15px 15px;
+}
+
+.time-information span {
+    font-size: 15px;
+    color: hsl(235, 45%, 61%);
+    margin-top: 10px;
+}
+
+.time-information span:hover {
+    cursor: pointer;
+    filter: brightness(0) invert(1);
+}
+
+.icons {
+    position: absolute;
+    right: 0;
+    top: 5px;
+    z-index: 0;
+    margin-right: 10px;
+    margin-top: -12px;
+}
+
+.information-container {
+    z-index: 1;
+    background-color: hsl(235, 46%, 20%);
+    margin-top: auto;
+    height: 75%;
+    border-radius: 15px 15px 0px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0px 20px 0px 20px;
+}
+
+.information-container:hover {
+    cursor: pointer;
+}
+
+.information-container:active {
+    background-color: hsl(235, 49%, 35%);
+}
+
+.title-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.title-container p {
+    font-size: 20px;
+    color: white;
+    font-weight: 500;
+}
+
+.time-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.time-container p:first-child {
+    font-size: 32px;
+    color: white;
+    font-weight: 100;
+}
+
+.time-container p:last-child {
+    font-size: 13px;
+    color: hsl(236, 100%, 87%);
+}
+
+.icon-ellipsis-container img:hover {
+    cursor: pointer;
+    filter: brightness(0) invert(1);
+}
+
+@media only screen and (min-width: 788px) {
+   
+    html,body {
+        height: 100%;
+    }
+
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    main {
+        margin: 0 150px 0 150px;
+        padding: 0;
+        display: grid;
+        gap: 20px;
+        grid-template-areas: 
+            'user work play'
+            'user study exercise'
+            'user social selfCare';
+    }
+    
+    figure {
+        margin-bottom: 15px;
+    }
+
+    #user {
+        width: 220px;
+        height: initial;
+        margin-bottom: 0px;
+        position: relative;
+        grid-area: user;
+    }
+
+    #work { grid-area: work;}
+    #play { grid-area: play;}
+    #study { grid-area: study;}
+    #exercise { grid-area: exercise;}
+    #social { grid-area: social;}
+    #self-care { grid-area: selfCare;}
+
+    .container {
+        margin-bottom: 0px;
+        height: 150px;
+        width: 250px;
+    }
+
+    .user-information {
+        position: absolute;
+        border-radius: 0px;
+        height: 340px;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        padding-left: 22px;
+        padding-top: 22px;
+        border-radius: 15px;
+        z-index: 1;
+    }
+
+    .user-name-container {
+        margin-left: 0px;
+        margin-top: 20px;
+    }
+
+    .user-name-container p:last-child {
+        font-size: 35px;
+        width: 50%;
+    }
+
+    .time-information {
+        position: absolute;
+        height: 35%;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        z-index: 0;
+    }
+
+    .time-information span {
+        margin-top: 20px;
+        margin-left: 20px;
+    }
+
+    .information-container {
+        justify-content: space-between;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .title-container p {
+        font-size: 14px;
+    }
+
+    .time-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .time-container p:first-child {
+        margin-bottom: 5px;
+        font-size: 32px;
+    }
+
+    .time-container p:last-child {
+        font-size: 12px;
+    }
+    
+} 
+
+@media only screen and (min-width: 1060px) {
+
+    main {
+        grid-template-areas: 
+            'user work play study'
+            'user exercise social selfCare';
+    }
+
+    figure {
+        margin-bottom: 5px;
+    }
+
+    .container {
+        height: 200px;
+    }
+
+    .user-information {
+        height: 290px;
+    }
+
+    .information-container {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    .title-container p {
+        font-size: 16px;
+    }
+
+    .time-container p:first-child {
+        margin-bottom: 10px;
+        font-size: 37px;
+    }
+}
