@@ -1,350 +1,146 @@
 const inputBill = document.getElementById('input-bill') as HTMLInputElement;
 const inputPeople = document.getElementById('input-people') as HTMLInputElement;
-const percentageButton = document.getElementsByClassName('percentage-button') as HTMLCollection;
-const percetageCustom = document.getElementById('custom-percentage') as HTMLInputElement;
+const percentageButtons = document.getElementsByClassName('percentage-button') as HTMLCollection;
+const percentageCustom = document.getElementById('custom-percentage') as HTMLInputElement;
 const resetButton = document.getElementById('reset-button') as HTMLElement;
 const fieldTip = document.getElementById('tip-amount') as HTMLElement;
-const fieldTotal = document.getElementById('total-person') as HTMLElement;    
+const fieldTotal = document.getElementById('total-person') as HTMLElement;
+
 let billValue: number | undefined;
 let numberPeople: number | undefined;
 let percentageValue: number | undefined;
 let percentageCustomValue: number | undefined;
 
-function inputValues() {
-
-    function validateAndCalculate() {
-        if(percentageValue === undefined) {
-            if (billValue !== undefined && percentageCustomValue !== undefined && numberPeople !== undefined && numberPeople > 0) {
-                calculate(billValue, percentageCustomValue, numberPeople);
-            }
-        }
-        if(percentageCustomValue === undefined) {
-            if (billValue !== undefined && percentageValue !== undefined && numberPeople !== undefined && numberPeople > 0) {
-                calculate(billValue, percentageValue, numberPeople);
-            }
-        } 
-    }
-
-    inputBill?.addEventListener('input', () => {  
-        billValue = Number(inputBill.value);
-
-        if (isNaN(billValue)) {
-            const errorMessageLetter = document.getElementById('error-message-letter-bill');
-            if (errorMessageLetter) errorMessageLetter.remove();
-
-            const errorMessageZero = document.getElementById('error-message-zero-bill');
-            if (errorMessageZero) errorMessageZero.remove();
-
-            inputBill.style.outlineWidth = '2px';
-            inputBill.style.outlineStyle = 'solid';
-            inputBill.style.outlineColor = 'red';
-
-            const errorMessage = document.createElement('p');
-            const textMessage = document.createTextNode('Can\'t be letters');
-
-            errorMessage.appendChild(textMessage);
-            errorMessage.style.color = 'red';
-            errorMessage.id = 'error-message-letter-bill';
-            errorMessage.style.fontSize = '12px';
-
-            const labelContainer = document.getElementsByClassName('label-container');
-            labelContainer[0].appendChild(errorMessage);
-        } else if (billValue < 0) {
-            const errorMessageLetter = document.getElementById('error-message-letter-bill');
-            if (errorMessageLetter) errorMessageLetter.remove();
-
-            const errorMessageZero = document.getElementById('error-message-zero-bill');
-            if (errorMessageZero) errorMessageZero.remove();
-
-            inputBill.style.outlineWidth = '2px';
-            inputBill.style.outlineStyle = 'solid';
-            inputBill.style.outlineColor = 'red';
-
-            const errorMessage = document.createElement('p');
-            const textMessage = document.createTextNode('Can\'t be less than zero');
-
-            errorMessage.appendChild(textMessage);
-            errorMessage.style.color = 'red';
-            errorMessage.id = 'error-message-zero-bill';
-            errorMessage.style.fontSize = '12px';
-
-            const labelContainer = document.getElementsByClassName('label-container');
-            labelContainer[0].appendChild(errorMessage);
-        } else {
-            const errorMessageLetter = document.getElementById('error-message-letter-bill');
-            const errorMessageZero = document.getElementById('error-message-zero-bill');
-
-            errorMessageLetter?.remove();
-            errorMessageZero?.remove();
-
-            inputBill.style.outlineWidth = '';
-            inputBill.style.outlineStyle = '';
-            inputBill.style.outlineColor = '';
-        }
-        validateAndCalculate();
-    });
-
-    for (let i = 0; i < percentageButton.length; i++) {
-        percentageButton[i].addEventListener('click', () => {
-            percetageCustom.value = '';
-            percentageCustomValue = undefined;
-
-            for (let j = 0; j < percentageButton.length; j++) {
-                percentageButton[j].classList.remove('button-clicked');
-            }
-            percentageButton[i].classList.add('button-clicked');
-
-            const percentageText = percentageButton[i].textContent?.replace('%', '');
-            percentageValue = Number(percentageText);
-
-            const errorMessageLetter = document.getElementById('error-message-letter-custom');
-            if (errorMessageLetter) {
-                errorMessageLetter.remove();
-            }
-
-            const errorMessageZero = document.getElementById('error-message-zero-custom');
-            if (errorMessageZero) { 
-                errorMessageZero.remove();
-            }
-
-            percetageCustom.style.outlineWidth = '';
-            percetageCustom.style.outlineStyle = '';
-            percetageCustom.style.outlineColor = '';
-
-            validateAndCalculate();
-        });
-    }
-
-    percetageCustom.addEventListener('input', () => {
-        for(let i = 0; i < percentageButton.length; i++) {
-            percentageButton[i].classList.remove('button-clicked');
-        }
-        percentageValue = undefined
-
-        percentageCustomValue = Number(percetageCustom.value)
-        if (isNaN(percentageCustomValue)) {
-            const errorMessageLetter = document.getElementById('error-message-letter-custom');
-            if (errorMessageLetter) errorMessageLetter.remove();
-
-            const errorMessageZero = document.getElementById('error-message-zero-custom');
-            if (errorMessageZero) errorMessageZero.remove();
-
-            percetageCustom.style.outlineWidth = '2px';
-            percetageCustom.style.outlineStyle = 'solid';
-            percetageCustom.style.outlineColor = 'red';
-
-            const errorMessage = document.createElement('p');
-            const textMessage = document.createTextNode('Can\'t be letters');
-
-            errorMessage.appendChild(textMessage);
-            errorMessage.style.color = 'red';
-            errorMessage.id = 'error-message-letter-custom';
-            errorMessage.style.fontSize = '12px';
-
-            const labelContainer = document.getElementsByClassName('label-container');
-            labelContainer[1].appendChild(errorMessage);
-
-        } else if (percentageCustomValue < 0) {
-            const errorMessageLetter = document.getElementById('error-message-letter-custom');
-            if (errorMessageLetter) {
-                errorMessageLetter.remove();
-            }
-
-            const errorMessageZero = document.getElementById('error-message-zero-custom');
-            if (errorMessageZero) { 
-                errorMessageZero.remove();
-            }
-
-            percetageCustom.style.outlineWidth = '2px';
-            percetageCustom.style.outlineStyle = 'solid';
-            percetageCustom.style.outlineColor = 'red';
-
-            const errorMessage = document.createElement('p');
-            const textMessage = document.createTextNode('Can\'t be less than 0');
-
-            errorMessage.appendChild(textMessage);
-            errorMessage.style.color = 'red';
-            errorMessage.id = 'error-message-zero-custom';
-            errorMessage.style.fontSize = '12px';
-
-            const labelContainer = document.getElementsByClassName('label-container');
-            labelContainer[1].appendChild(errorMessage);
-
-        } else {
-            const errorMessageLetter = document.getElementById('error-message-letter-custom');
-            const errorMessageZero = document.getElementById('error-message-zero-custom');
-
-            errorMessageLetter?.remove();
-            errorMessageZero?.remove();
-
-            percetageCustom.style.outlineWidth = '';
-            percetageCustom.style.outlineStyle = '';
-            percetageCustom.style.outlineColor = '';
-        }   
-        validateAndCalculate();
-    });
-
-    inputPeople?.addEventListener('input', () => {
-        numberPeople = Number(inputPeople.value);
-
-        if (isNaN(numberPeople)) {
-            const errorMessageLetter = document.getElementById('error-message-letter');
-            if (errorMessageLetter) errorMessageLetter.remove();
-
-            const errorMessageZero = document.getElementById('error-message-zero');
-            if (errorMessageZero) errorMessageZero.remove();
-
-            inputPeople.style.outlineWidth = '2px';
-            inputPeople.style.outlineStyle = 'solid';
-            inputPeople.style.outlineColor = 'red';
-
-            const errorMessage = document.createElement('p');
-            const textMessage = document.createTextNode('Can\'t be letters');
-
-            errorMessage.appendChild(textMessage);
-            errorMessage.style.color = 'red';
-            errorMessage.id = 'error-message-letter';
-            errorMessage.style.fontSize = '12px';
-            
-            const labelContainer = document.getElementsByClassName('label-container');
-            labelContainer[2].appendChild(errorMessage);
-
-        } else if(numberPeople % 1 !== 0) {
-            numberPeople = undefined;
-            const errorMessageLetter = document.getElementById('error-message-letter');
-            if (errorMessageLetter) errorMessageLetter.remove();
-
-            const errorMessageZero = document.getElementById('error-message-zero');
-            if (errorMessageZero) errorMessageZero.remove();
-
-            inputPeople.style.outlineWidth = '2px';
-            inputPeople.style.outlineStyle = 'solid';
-            inputPeople.style.outlineColor = 'red';
-
-            const errorMessage = document.createElement('p');
-            const textMessage = document.createTextNode('Must be integer');
-
-            errorMessage.appendChild(textMessage);
-            errorMessage.style.color = 'red';
-            errorMessage.id = 'error-message-letter';
-            errorMessage.style.fontSize = '12px';
-            
-            const labelContainer = document.getElementsByClassName('label-container');
-            labelContainer[2].appendChild(errorMessage);
-
-        } else if (numberPeople === 0) {
-            const errorMessageLetter = document.getElementById('error-message-letter');
-            if (errorMessageLetter) errorMessageLetter.remove();
-
-            const errorMessageZero = document.getElementById('error-message-zero');
-            if (errorMessageZero) errorMessageZero.remove();
-
-            inputPeople.style.outlineWidth = '2px';
-            inputPeople.style.outlineStyle = 'solid';
-            inputPeople.style.outlineColor = 'red';
-
-            const errorMessage = document.createElement('p');
-            const textMessage = document.createTextNode('Can\'t be zero');
-
-            errorMessage.appendChild(textMessage);
-            errorMessage.style.color = 'red';
-            errorMessage.id = 'error-message-zero';
-            errorMessage.style.fontSize = '12px';
-
-            const labelContainer = document.getElementsByClassName('label-container');
-            labelContainer[2].appendChild(errorMessage);
-
-        } else if (numberPeople < 0) {
-            const errorMessageLetter = document.getElementById('error-message-letter');
-            if (errorMessageLetter) errorMessageLetter.remove();
-
-            const errorMessageZero = document.getElementById('error-message-zero');
-            if (errorMessageZero) errorMessageZero.remove();
-
-            inputPeople.style.outlineWidth = '2px';
-            inputPeople.style.outlineStyle = 'solid';
-            inputPeople.style.outlineColor = 'red';
-
-            const errorMessage = document.createElement('p');
-            const textMessage = document.createTextNode('Must be positive');
-
-            errorMessage.appendChild(textMessage);
-            errorMessage.style.color = 'red';
-            errorMessage.id = 'error-message-zero';
-            errorMessage.style.fontSize = '12px';
-
-            const labelContainer = document.getElementsByClassName('label-container');
-            labelContainer[2].appendChild(errorMessage);
-        } else  {
-            const errorMessageLetter = document.getElementById('error-message-letter');
-            const errorMessageZero = document.getElementById('error-message-zero');
-
-            errorMessageLetter?.remove();
-            errorMessageZero?.remove();
-
-            inputPeople.style.outlineWidth = '';
-            inputPeople.style.outlineStyle = '';
-            inputPeople.style.outlineColor = '';
-        }
-
-        if(inputPeople.value === '') {
-            const errorMessageLetter = document.getElementById('error-message-letter');
-            const errorMessageZero = document.getElementById('error-message-zero');
-
-            errorMessageLetter?.remove();
-            errorMessageZero?.remove();
-
-            inputPeople.style.outlineWidth = '';
-            inputPeople.style.outlineStyle = '';
-            inputPeople.style.outlineColor = '';
-        }
-        validateAndCalculate();
-    });
+function showError(element: HTMLInputElement, message: string) {
+    const errorMessage = document.createElement('p');
+    errorMessage.textContent = message;
+    errorMessage.style.color = 'red';
+    errorMessage.style.fontSize = '12px';
+    errorMessage.classList.add('error-message');
+    
+    const labelContainer = element.parentElement;
+    labelContainer?.appendChild(errorMessage);
+
+    element.style.outlineWidth = '2px';
+    element.style.outlineStyle = 'solid';
+    element.style.outlineColor = 'red';
 }
 
-function calculate(billValueChecked: number, percentageValueChecked: number, numberPeopleChecked: number) {
-    let total = (billValueChecked + (billValueChecked * (percentageValueChecked / 100))) / numberPeopleChecked;
-    let tipAmount = (billValueChecked * (percentageValueChecked / 100)) / numberPeopleChecked;
+function clearErrors(element: HTMLInputElement) {
+    const errorMessages = element.parentElement?.querySelectorAll('.error-message');
+    errorMessages?.forEach(error => error.remove());
 
-    if(fieldTip && fieldTotal) {
-        fieldTip.innerHTML = `$${tipAmount.toFixed(2)}`;
-        fieldTotal.innerHTML = `$${total.toFixed(2)}`;
-        resetButton.style.background = 'hsl(172, 67%, 45%)';
-        resetButton.style.cursor = 'pointer';
-    }
+    element.style.outlineWidth = '';
+    element.style.outlineStyle = '';
+    element.style.outlineColor = '';
+}
 
-    resetButton.addEventListener('mouseover', resetButtonMouseOver);
-    resetButton.addEventListener('mouseout', resetButtonMouseOut);
-    resetButton.addEventListener('click', () => {
-        fieldTip.innerHTML = '$0.00';
-        fieldTotal.innerHTML = '$0.00';
-
-        inputBill.value = '';
-        inputPeople.value = '';
-        percetageCustom.value = '';
-
-        billValue = undefined;
-        numberPeople = undefined;
-        percentageValue = undefined;
-        percentageCustomValue = undefined;
-
-        for (let i = 0; i < percentageButton.length; i++) {
-            percentageButton[i].classList.remove('button-clicked');
+function validateAndCalculate() {
+    if (billValue !== undefined && numberPeople !== undefined && numberPeople > 0) {
+        const percentage = percentageCustomValue ?? percentageValue;
+        if (percentage !== undefined) {
+            calculate(billValue, percentage, numberPeople);
         }
-
-        resetButton.style.cursor = 'initial';
-        resetButton.style.background = 'hsla(172, 67%, 45%, 0.226)';
-        resetButton.removeEventListener('mouseover', resetButtonMouseOver);
-        resetButton.removeEventListener('mouseout', resetButtonMouseOut);
-    });
+    }
 }
 
-function resetButtonMouseOver() {
-    resetButton.style.background = 'hsl(172, 88%, 74%)';
-}
+function calculate(bill: number, percentage: number, people: number) {
+    const tipAmount = (bill * percentage / 100) / people;
+    const total = (bill + bill * percentage / 100) / people;
 
-function resetButtonMouseOut() {
+    fieldTip.textContent = `$${tipAmount.toFixed(2)}`;
+    fieldTotal.textContent = `$${total.toFixed(2)}`;
+    
     resetButton.style.background = 'hsl(172, 67%, 45%)';
+    resetButton.style.cursor = 'pointer';
 }
 
-inputValues();
+function resetInputs() {
+    fieldTip.textContent = '$0.00';
+    fieldTotal.textContent = '$0.00';
+
+    inputBill.value = '';
+    inputPeople.value = '';
+    percentageCustom.value = '';
+
+    billValue = undefined;
+    numberPeople = undefined;
+    percentageValue = undefined;
+    percentageCustomValue = undefined;
+
+    Array.from(percentageButtons).forEach(button => button.classList.remove('button-clicked'));
+
+    resetButton.style.cursor = 'initial';
+    resetButton.style.background = 'hsla(172, 67%, 45%, 0.226)';
+}
+
+function handleInputBill() {
+    billValue = Number(inputBill.value);
+
+    clearErrors(inputBill);
+
+    if (isNaN(billValue)) {
+        showError(inputBill, "Can't be letters");
+    } else if (billValue < 0) {
+        showError(inputBill, "Can't be less than zero");
+    }
+    
+    validateAndCalculate();
+}
+
+function handleInputPeople() {
+    numberPeople = Number(inputPeople.value);
+
+    clearErrors(inputPeople);
+
+    if (isNaN(numberPeople)) {
+        showError(inputPeople, "Can't be letters");
+    } else if (!Number.isInteger(numberPeople)) {
+        showError(inputPeople, "Must be integer");
+    } else if (numberPeople <= 0) {
+        showError(inputPeople, "Must be greater than zero");
+    }
+    
+    validateAndCalculate();
+}
+
+function handlePercentageButtonClick(event: Event) {
+    percentageCustom.value = '';
+    percentageCustomValue = undefined;
+
+    Array.from(percentageButtons).forEach(button => button.classList.remove('button-clicked'));
+    (event.currentTarget as HTMLElement).classList.add('button-clicked');
+
+    percentageValue = Number((event.currentTarget as HTMLElement).textContent?.replace('%', ''));
+
+    clearErrors(percentageCustom);
+
+    validateAndCalculate();
+}
+
+function handleCustomPercentageInput() {
+    Array.from(percentageButtons).forEach(button => button.classList.remove('button-clicked'));
+    percentageValue = undefined;
+
+    percentageCustomValue = Number(percentageCustom.value);
+
+    clearErrors(percentageCustom);
+
+    if (isNaN(percentageCustomValue)) {
+        showError(percentageCustom, "Can't be letters");
+    } else if (percentageCustomValue < 0) {
+        showError(percentageCustom, "Can't be less than 0");
+    }
+    
+    validateAndCalculate();
+}
+
+function init() {
+    inputBill.addEventListener('input', handleInputBill);
+    inputPeople.addEventListener('input', handleInputPeople);
+    percentageCustom.addEventListener('input', handleCustomPercentageInput);
+    Array.from(percentageButtons).forEach(button => button.addEventListener('click', handlePercentageButtonClick));
+    resetButton.addEventListener('click', resetInputs);
+}
+
+init();
